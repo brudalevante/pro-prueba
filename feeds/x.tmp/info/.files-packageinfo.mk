@@ -1,5 +1,3 @@
-$(eval $(call PackageDir,base-config-setting,base-config-setting,))
-$(eval $(call PackageDir,exfat-linux,exfat-linux,))
 $(eval $(call PackageDir,hev-socks5-tunnel,hev-socks5-tunnel,))
 $(eval $(call PackageDir,hmac-sha1-util,hmac-sha1-util,))
 $(eval $(call PackageDir,initramfs-upgrade-fw,initramfs-upgrade-fw,))
