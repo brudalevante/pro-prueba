@@ -1,0 +1,22 @@
+Source-Makefile: feeds/x/luci-app-proxyxwan/Makefile
+
+Package: luci-app-proxyxwan
+Submenu: PROXY XWAN Support
+Version: 1.0.0-r1
+Depends: +libc +lua-ipops +redsocks
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: opt
+Category: X
+Repository: base
+Title: LuCI Support for proxyxwan
+Maintainer: Chen Minqiang <ptpt52@gmail.com>
+Source: 
+License: GPLv3
+LicenseFiles: LICENSE
+Type: ipkg
+Description: 	LuCI Support for proxyxwan.
+@@
+
+

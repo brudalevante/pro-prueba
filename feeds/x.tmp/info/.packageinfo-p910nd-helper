@@ -1,0 +1,21 @@
+Source-Makefile: feeds/x/p910nd-helper/Makefile
+
+Package: p910nd-helper
+Submenu: Printer
+Version: 0.0.1-r1
+Depends: +libc 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: opt
+Category: X
+Repository: base
+Title: p910nd printer firmware and helper
+Maintainer: Chen Minqiang <ptpt52@gmail.com>
+Source: p910nd-helper-0.0.1.tar.zst
+License: GPL-2.0
+Type: ipkg
+Description: p910nd printer firmware and helper
+@@
+
+

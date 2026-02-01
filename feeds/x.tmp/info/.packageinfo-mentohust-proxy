@@ -1,0 +1,22 @@
+Source-Makefile: feeds/x/mentohust-proxy/Makefile
+Build-Depends: gettext-full/host
+
+Package: mentohust-proxy
+Submenu: Mentohust
+Version: 4.0.0-r962715e9f522a0b7e1e19758fed6c547cea51a33
+Depends: +libc +libpcap
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: opt
+Category: X
+Repository: base
+Title: Mentohust proxy
+Maintainer: Chen Minqiang <ptpt52@gmail.com>
+Source: mentohust-proxy-4.0.0-962715e9f522a0b7e1e19758fed6c547cea51a33.tar.xz
+License: GPL-2.0
+Type: ipkg
+Description:  Mentohust proxy
+@@
+
+

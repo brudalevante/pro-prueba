@@ -1,0 +1,1203 @@
+Source-Makefile: feeds/x/base-config-setting/Makefile
+
+Package: base-config-setting
+Submenu: Base config setting for this board
+Version: 1.0.0-r1
+Depends: +libc +busybox +base-files +jsonfilter
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: Applications
+Category: X
+Title: base-config-setting
+Maintainer: Chen Minqiang <ptpt52@gmail.com>
+Source: 
+License: GPL-2.0
+Type: ipkg
+Description:   Base config setting for this board
+@@
+Config:
+  source "feeds/x/base-config-setting/Config.in"
+@@
+
+Package: base-config-setting-ext4fs
+Submenu: Base config setting for this board
+Version: 1.0.0-r1
+Depends: +libc +base-config-setting +busybox +@BUSYBOX_CUSTOM +@BUSYBOX_CONFIG_STAT +kmod-fs-ext4 +tune2fs +ethtool +blockd +blkid +fdisk +gdisk +partx-utils +e2fsprogs
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: Applications
+Category: X
+Title: base-config-setting ext4fs set
+Maintainer: Chen Minqiang <ptpt52@gmail.com>
+Source: 
+License: GPL-2.0
+Type: ipkg
+Description: base-config-setting ext4fs set
+@@
+
+
+Source-Makefile: feeds/x/exfat-linux/Makefile
+
+Package: kmod-exfat-linux
+Submenu: Filesystems
+Version: <LINUX_VERSION>.20211216-r1
+Depends: +kmod-nls-base
+Conflicts: 
+Menu-Depends: 
+Provides: kmod-fs-exfat
+Section: Applications
+Category: X
+Title: ExFAT Kernel driver
+Maintainer: Chen Minqiang <ptpt52@gmail.com>
+Source: exfat-linux-20211216.tar.gz
+License: GPL-2.0
+LicenseFiles: LICENSE
+Type: ipkg
+Description: 	Kernel module for ExFAT Filesytems
+@@
+
+
+Source-Makefile: feeds/x/hev-socks5-tunnel/Makefile
+
+Package: hev-socks5-tunnel
+Version: 2.5.3-r1
+Depends: +libc 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: opt
+Category: X
+Repository: base
+Title: A tunnel over Socks5 proxy (tun2socks) for Unix.
+Maintainer: Chen Minqiang <ptpt52@x-wrt.com>
+Source: hev-socks5-tunnel-2.5.3.tar.gz
+License: GPL-3.0
+LicenseFiles: LICENSE
+URL: https://github.com/heiher/hev-socks5-tunnel
+Type: ipkg
+Description: A tunnel over Socks5 proxy (tun2socks) for Unix.
+@@
+
+
+Source-Makefile: feeds/x/hmac-sha1-util/Makefile
+
+Package: hmac-sha1-util
+Submenu: hmac-sha1-util tools
+Version: 0.0.1-r1
+Depends: +libc 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: opt
+Category: X
+Repository: base
+Title: hmac-sha1-util util support
+Maintainer: Chen Minqiang <ptpt52@gmail.com>
+Source: hmac-sha1-util-0.0.1.tar.zst
+License: GPL-2.0
+Type: ipkg
+Description: hmac-sha1-util util support
+@@
+
+
+Source-Makefile: feeds/x/initramfs-upgrade-fw/Makefile
+
+Package: initramfs-upgrade-fw
+Version: 0.0.1-r1
+Depends: +libc +busybox
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: opt
+Category: X
+Repository: base
+Title: initramfs-upgrade-fw for factory test only
+Maintainer: Chen Minqiang <ptpt52@gmail.com>
+Source: initramfs-upgrade-fw-0.0.1.tar.zst
+License: GPL-2.0
+Type: ipkg
+Description: initramfs-upgrade-fw for factory test only
+@@
+
+
+Source-Makefile: feeds/x/lede-cups/cups/Makefile
+
+Package: cups
+Submenu: Printing
+Version: 2.3.0-r2
+Depends: +libc +libcups-2.3 +libusb-1.0 +libstdcpp
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Repository: base
+Title: Common UNIX Printing System (daemon)
+Maintainer: 
+Source: cups-2.3.0-source.tar.gz
+URL: http://www.cups.org/
+Type: ipkg
+Description: 	Common UNIX Printing System (daemon)
+@@
+
+Package: libcups-2.3
+Submenu: Printing
+Version: 2.3.0-r2
+Depends: +libc +zlib +libpthread +libpng +libjpeg
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: libs
+Category: Libraries
+Repository: base
+Title: Common UNIX Printing System - Core library
+Maintainer: 
+Source: cups-2.3.0-source.tar.gz
+URL: http://www.cups.org/
+Type: ipkg
+Description: 	Common UNIX Printing System - Core library
+@@
+
+Package: libcupsimage
+Submenu: Printing
+Version: 2.3.0-r2
+Depends: +libc +libcups-2.3
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: libs
+Category: Libraries
+Repository: base
+Title: Common UNIX Printing System - Image library
+Maintainer: 
+Source: cups-2.3.0-source.tar.gz
+URL: http://www.cups.org/
+Type: ipkg
+Description: 	Common UNIX Printing System - Image library
+@@
+
+Package: cups-bsd
+Submenu: Printing
+Version: 2.3.0-r2
+Depends: +libc +libcups-2.3
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Repository: base
+Title: Common UNIX Printing System - BSD commands (old)
+Maintainer: 
+Source: cups-2.3.0-source.tar.gz
+URL: http://www.cups.org/
+Type: ipkg
+Description: 	Common UNIX Printing System - BSD commands (old)
+@@
+
+Package: cups-client
+Submenu: Printing
+Version: 2.3.0-r2
+Depends: +libc +libcups-2.3 +libcupsimage
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Repository: base
+Title: Common UNIX Printing System - Client commands
+Maintainer: 
+Source: cups-2.3.0-source.tar.gz
+URL: http://www.cups.org/
+Type: ipkg
+Description: 	Common UNIX Printing System - Client commands
+@@
+
+Package: cups-filters
+Submenu: Printing
+Version: 2.3.0-r2
+Depends: +libc +libcupsimage
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Repository: base
+Title: Common UNIX Printing System - Filter
+Maintainer: 
+Source: cups-2.3.0-source.tar.gz
+URL: http://www.cups.org/
+Type: ipkg
+Description: 	Common UNIX Printing System - Filter
+@@
+
+Package: cups-ppdc
+Submenu: Printing
+Version: 2.3.0-r2
+Depends: +libc +libcups-2.3 +zlib +libpthread +libpng +libjpeg +libstdcpp
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Repository: base
+Title: Common UNIX Printing System - PPDC utils
+Maintainer: 
+Source: cups-2.3.0-source.tar.gz
+URL: http://www.cups.org/
+Type: ipkg
+Description: 	Common UNIX Printing System - PPDC utils
+@@
+
+
+Source-Makefile: feeds/x/lede-cups/cups-bjnp/Makefile
+Build-Depends: cups
+
+Package: cups-bjnp
+Submenu: Printing
+Version: 2.0.2-r1
+Depends: +libc cups
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Repository: base
+Title: BJNP protocol backend for CUPS
+Maintainer: 
+Source: cups-bjnp-2.0.2.tar.gz
+URL: http://sourceforge.net/projects/cups-bjnp/
+Type: ipkg
+Description: CUPS backend for the canon printers using the proprietary USB over
+IP BJNP protocol. This backend allows Cups to print over the network
+to a Canon printer. It currently supports Cups 1.2 and Cups 1.3 and
+is designed by reverse engineering.
+@@
+
+
+Source-Makefile: feeds/x/lua-ipops/Makefile
+
+Package: lua-ipops
+Submenu: Libs
+Version: 0.0.1-r1
+Depends: +libc +lua
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: opt
+Category: X
+Repository: base
+Title: lua ipops lib
+Maintainer: Chen Minqiang <ptpt52@gmail.com>
+Source: lua-ipops-0.0.1.tar.zst
+License: GPL-2.0
+Type: ipkg
+Description: lua ipops lib
+@@
+
+
+Source-Makefile: feeds/x/luci-app-3ginfo-lite/Makefile
+Build-Depends: lua/host luci-base/host LUCI_CSSTIDY:csstidy/host LUCI_SRCDIET:luasrcdiet/host 
+
+Package: luci-app-3ginfo-lite
+Submenu: 3. Applications
+Version: 1.0.58-r1
+Depends: +libc +sms-tool +comgt +kmod-usb-serial-option
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: luci
+Category: LuCI
+Repository: base
+Title: LuCI JS Support for 3ginfo-lite
+Maintainer: OpenWrt LuCI community
+Source: 
+URL: https://github.com/openwrt/luci
+Type: ipkg
+Description:    LuCI JS interface for the 3ginfo-lite. The package allows you to view the parameters of the mobile internet connection.
+@@
+
+Package: luci-i18n-3ginfo-lite-de
+Default: LUCI_LANG_de||(ALL&&m)
+Version: x
+Depends: +libc luci-app-3ginfo-lite
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: luci
+Category: LuCI
+Repository: base
+Title: luci-app-3ginfo-lite - de translation
+Maintainer: 
+Source: 
+Type: ipkg
+Hidden: 1
+Description:     Translation for luci-app-3ginfo-lite - Deutsch (German)
+@@
+
+Package: luci-i18n-3ginfo-lite-it
+Default: LUCI_LANG_it||(ALL&&m)
+Version: x
+Depends: +libc luci-app-3ginfo-lite
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: luci
+Category: LuCI
+Repository: base
+Title: luci-app-3ginfo-lite - it translation
+Maintainer: 
+Source: 
+Type: ipkg
+Hidden: 1
+Description:     Translation for luci-app-3ginfo-lite - Italiano (Italian)
+@@
+
+Package: luci-i18n-3ginfo-lite-pl
+Default: LUCI_LANG_pl||(ALL&&m)
+Version: x
+Depends: +libc luci-app-3ginfo-lite
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: luci
+Category: LuCI
+Repository: base
+Title: luci-app-3ginfo-lite - pl translation
+Maintainer: 
+Source: 
+Type: ipkg
+Hidden: 1
+Description:     Translation for luci-app-3ginfo-lite - Polski (Polish)
+@@
+
+
+Source-Makefile: feeds/x/luci-app-macvlan/Makefile
+
+Package: luci-app-macvlan
+Submenu: Macvlan
+Version: 1.0.0-r1
+Depends: +libc +kmod-macvlan +kmod-ipvlan +busybox +@BUSYBOX_CUSTOM +@BUSYBOX_CONFIG_VCONFIG +luci-compat
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: opt
+Category: X
+Repository: base
+Title: LuCI Support for macvlan
+Maintainer: Chen Minqiang <ptpt52@gmail.com>
+Source: 
+License: GPLv3
+LicenseFiles: LICENSE
+Type: ipkg
+Description: 	LuCI Support for macvlan.
+@@
+
+
+Source-Makefile: feeds/x/luci-app-mentohust/Makefile
+
+Package: luci-app-mentohust
+Submenu: Mentohust
+Version: 4.0.0-r1
+Depends: +libc +mentohust +luci-compat +luci-lib-ipkg
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: opt
+Category: X
+Repository: base
+Title: LuCI Support for mentohust
+Maintainer: Chen Minqiang <ptpt52@gmail.com>
+Source: 
+License: GPLv3
+LicenseFiles: LICENSE
+Type: ipkg
+Description: 	LuCI Support for mentohust.
+@@
+
+
+Source-Makefile: feeds/x/luci-app-natcap/Makefile
+
+Package: luci-app-natcap
+Submenu: Natcap Support
+Version: 5.0.1-r1
+Depends: +libc +natcapd +lua-cjson +luci-compat
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: opt
+Category: X
+Repository: base
+Title: LuCI Support for natcap
+Maintainer: Chen Minqiang <ptpt52@gmail.com>
+Source: 
+License: GPLv3
+LicenseFiles: LICENSE
+Type: ipkg
+Description: 	LuCI Support for natcap.
+@@
+
+
+Source-Makefile: feeds/x/luci-app-natflow-users/Makefile
+
+Package: luci-app-natflow-users
+Submenu: Natflow users module support
+Version: 1.0.1-r1
+Depends: +libc +natflow-auth +luci-compat
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: opt
+Category: X
+Repository: base
+Title: LuCI Support for natflow users
+Maintainer: Chen Minqiang <ptpt52@gmail.com>
+Source: 
+License: GPLv3
+LicenseFiles: LICENSE
+Type: ipkg
+Description: 	LuCI Support for natflow users.
+@@
+
+
+Source-Makefile: feeds/x/luci-app-pptpxwan/Makefile
+
+Package: luci-app-pptpxwan
+Submenu: PPTP XWAN Support
+Version: 1.0.1-r1
+Depends: +libc +lua-ipops
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: opt
+Category: X
+Repository: base
+Title: LuCI Support for pptpxwan
+Maintainer: Chen Minqiang <ptpt52@gmail.com>
+Source: 
+License: GPLv3
+LicenseFiles: LICENSE
+Type: ipkg
+Description: 	LuCI Support for pptpxwan.
+@@
+
+
+Source-Makefile: feeds/x/luci-app-proxyxwan/Makefile
+
+Package: luci-app-proxyxwan
+Submenu: PROXY XWAN Support
+Version: 1.0.0-r1
+Depends: +libc +lua-ipops +redsocks
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: opt
+Category: X
+Repository: base
+Title: LuCI Support for proxyxwan
+Maintainer: Chen Minqiang <ptpt52@gmail.com>
+Source: 
+License: GPLv3
+LicenseFiles: LICENSE
+Type: ipkg
+Description: 	LuCI Support for proxyxwan.
+@@
+
+
+Source-Makefile: feeds/x/luci-app-simplenetwork/Makefile
+
+Package: luci-app-simplenetwork
+Submenu: Configuration SimpleNetwork Support
+Version: 1.0.1-r1
+Depends: +libc 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: opt
+Category: X
+Repository: base
+Title: LuCI Support for simplenetwork
+Maintainer: Chen Minqiang <ptpt52@gmail.com>
+Source: 
+License: GPLv3
+LicenseFiles: LICENSE
+Type: ipkg
+Description: 	LuCI Support for simplenetwork.
+@@
+
+
+Source-Makefile: feeds/x/luci-app-sms-tool/Makefile
+Build-Depends: lua/host luci-base/host LUCI_CSSTIDY:csstidy/host LUCI_SRCDIET:luasrcdiet/host 
+
+Package: luci-app-sms-tool
+Submenu: 3. Applications
+Version: 1.9.6-r1
+Depends: +libc +sms-tool +kmod-usb-serial +kmod-usb-serial-option +comgt +luci-lua-runtime
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: luci
+Category: LuCI
+Repository: base
+Title: LuCI Support for sms-tool
+Maintainer: OpenWrt LuCI community
+Source: 
+URL: https://github.com/openwrt/luci
+Type: ipkg
+Description:    LuCI interface for the sms-tool. The user interface supports SMS/USSD Codes/AT Commands.
+@@
+
+Package: luci-i18n-sms-tool-pl
+Default: LUCI_LANG_pl||(ALL&&m)
+Version: x
+Depends: +libc luci-app-sms-tool
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: luci
+Category: LuCI
+Repository: base
+Title: luci-app-sms-tool - pl translation
+Maintainer: 
+Source: 
+Type: ipkg
+Hidden: 1
+Description:     Translation for luci-app-sms-tool - Polski (Polish)
+@@
+
+Package: luci-i18n-sms-tool-ru
+Default: LUCI_LANG_ru||(ALL&&m)
+Version: x
+Depends: +libc luci-app-sms-tool
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: luci
+Category: LuCI
+Repository: base
+Title: luci-app-sms-tool - ru translation
+Maintainer: 
+Source: 
+Type: ipkg
+Hidden: 1
+Description:     Translation for luci-app-sms-tool - Русский (Russian)
+@@
+
+
+Source-Makefile: feeds/x/luci-app-wizard/Makefile
+
+Package: luci-app-wizard
+Submenu: Configuration Wizard Support
+Version: 1.0.1-r1
+Depends: +libc +luci-base +rpcd-mod-iwinfo
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: opt
+Category: X
+Repository: base
+Title: LuCI Support for wizard
+Maintainer: Chen Minqiang <ptpt52@gmail.com>
+Source: 
+License: GPLv3
+LicenseFiles: LICENSE
+Type: ipkg
+Description: 	LuCI Support for wizard.
+@@
+
+
+Source-Makefile: feeds/x/luci-app-xwan/Makefile
+
+Package: luci-app-xwan
+Submenu: Xwan
+Version: 1.0.0-r1
+Depends: +libc +kmod-macvlan +busybox +@BUSYBOX_CUSTOM +@BUSYBOX_CONFIG_VCONFIG +luci-compat
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: opt
+Category: X
+Repository: base
+Title: LuCI Support for xwan
+Maintainer: Chen Minqiang <ptpt52@gmail.com>
+Source: 
+License: GPLv3
+LicenseFiles: LICENSE
+Type: ipkg
+Description: 	LuCI Support for xwan.
+@@
+
+
+Source-Makefile: feeds/x/luci-theme-argon/Makefile
+Build-Depends: lua/host luci-base/host LUCI_CSSTIDY:csstidy/host LUCI_SRCDIET:luasrcdiet/host 
+
+Package: luci-theme-argon
+Submenu: 4. Themes
+Version: 2.4.2-r20250623
+Depends: +libc +curl +jsonfilter +luci-lua-runtime
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: luci
+Category: LuCI
+Repository: base
+Title: Argon Theme
+Maintainer: OpenWrt LuCI community
+Source: 
+URL: https://github.com/openwrt/luci
+Type: ipkg
+Description: Argon Theme
+@@
+
+
+Source-Makefile: feeds/x/mbed-tools/Makefile
+
+Package: mbed-hmac-sha1
+Submenu: mbed tools
+Version: 0.0.1-r1
+Depends: +libc +libmbedtls
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: opt
+Category: X
+Repository: base
+Title: mbed-hmac-sha1 util support
+Maintainer: Chen Minqiang <ptpt52@gmail.com>
+Source: mbed-tools-0.0.1.tar.zst
+License: GPL-2.0
+Type: ipkg
+Description: mbed-hmac-sha1 util support
+@@
+
+
+Source-Makefile: feeds/x/mentohust/Makefile
+Build-Depends: gettext-full/host
+
+Package: mentohust
+Submenu: Mentohust
+Version: 4.0.0
+Depends: +libc +libpcap
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: opt
+Category: X
+Repository: base
+Title: Mentohust v4 support
+Maintainer: Chen Minqiang <ptpt52@gmail.com>
+Source: mentohust-4.0.0-2f9ef2d6df5d95c0faa2e542f1cb77114824e697.tar.xz
+License: GPL-2.0
+Type: ipkg
+Description:  Mentohust v4 support
+@@
+
+
+Source-Makefile: feeds/x/mentohust-proxy/Makefile
+Build-Depends: gettext-full/host
+
+Package: mentohust-proxy
+Submenu: Mentohust
+Version: 4.0.0-r962715e9f522a0b7e1e19758fed6c547cea51a33
+Depends: +libc +libpcap
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: opt
+Category: X
+Repository: base
+Title: Mentohust proxy
+Maintainer: Chen Minqiang <ptpt52@gmail.com>
+Source: mentohust-proxy-4.0.0-962715e9f522a0b7e1e19758fed6c547cea51a33.tar.xz
+License: GPL-2.0
+Type: ipkg
+Description:  Mentohust proxy
+@@
+
+
+Source-Makefile: feeds/x/natcap/Makefile
+
+Package: kmod-natcap
+Submenu: Natcap Support
+Version: <LINUX_VERSION>.20260113-r
+Depends: +kmod-ipt-conntrack +kmod-ipt-nat +kmod-ipt-ipset
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: kernel
+Category: X
+Title: Natcap kernel driver
+Maintainer: Chen Minqiang <ptpt52@gmail.com>
+Source: natcap-20260113.tar.gz
+License: GPL-2.0
+Type: ipkg
+Kernel-Config: CONFIG_NF_CONNTRACK_MARK=y
+Description:   Driver for natcap packet proxy to avoid inspection
+@@
+
+Package: natcapd
+Submenu: Natcap Support
+Version: 20260113
+Depends: +libc +kmod-natcap +libustream-ssl +uclient-fetch +lua-cjson +ipset +dnsmasq-full +@PACKAGE_dnsmasq_full_ipset +busybox +@BUSYBOX_CUSTOM +@BUSYBOX_CONFIG_CKSUM +@BUSYBOX_CONFIG_BASE64 +@BUSYBOX_CONFIG_TIMEOUT +@BUSYBOX_CONFIG_NOHUP +@BUSYBOX_CONFIG_DIFF
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: opt
+Category: X
+Repository: base
+Title: natcapd agent for natcap
+Maintainer: Chen Minqiang <ptpt52@gmail.com>
+Source: natcap-20260113.tar.gz
+License: GPL-2.0
+Type: ipkg
+Description:  Natcapd agent for natcap
+@@
+
+Package: natcapd-client
+Submenu: Natcap Support
+Version: 20260113
+Depends: +libc +libev
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: opt
+Category: X
+Repository: base
+Title: Natcapd_client agent for natcap
+Maintainer: Chen Minqiang <ptpt52@gmail.com>
+Source: natcap-20260113.tar.gz
+License: GPL-2.0
+Type: ipkg
+Description: Natcapd_client agent for natcap
+@@
+
+Package: natcapd-server
+Submenu: Natcap Support
+Version: 20260113
+Depends: +libc +libev
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: opt
+Category: X
+Repository: base
+Title: Natcapd_server agent for natcap
+Maintainer: Chen Minqiang <ptpt52@gmail.com>
+Source: natcap-20260113.tar.gz
+License: GPL-2.0
+Type: ipkg
+Description: Natcapd_server agent for natcap
+@@
+
+Package: natcapd-peer
+Submenu: Natcap Support
+Version: 20260113
+Depends: +libc +kmod-natcap +lua-cjson +ipset +busybox +@BUSYBOX_CUSTOM +@BUSYBOX_CONFIG_TIMEOUT
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: opt
+Category: X
+Repository: base
+Title: natcapd peer for natcap
+Maintainer: Chen Minqiang <ptpt52@gmail.com>
+Source: natcap-20260113.tar.gz
+License: GPL-2.0
+Type: ipkg
+Description: natcapd peer for natcap
+@@
+
+
+Source-Makefile: feeds/x/natflow/Makefile
+
+Package: kmod-natflow
+Submenu: Fast Forward Stacks
+Version: <LINUX_VERSION>.20260113-r
+Depends: +kmod-ipt-conntrack +kmod-ipt-nat +kmod-ipt-ipset +kmod-br-netfilter +LINUX_5_4:kmod-nf-flow
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: kernel
+Category: X
+Title: natflow kernel driver
+Maintainer: Chen Minqiang <ptpt52@gmail.com>
+Source: natflow-20260113.tar.gz
+License: GPL-2.0
+Type: ipkg
+Kernel-Config: CONFIG_NF_CONNTRACK_MARK=y CONFIG_NETFILTER_INGRESS=y
+Description:   fast nat forward kmod
+@@
+
+Package: natflow-boot
+Submenu: Fast Forward Stacks
+Version: 20260113
+Depends: +libc +kmod-natflow
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: opt
+Category: X
+Repository: base
+Title: natflow boot init script
+Maintainer: Chen Minqiang <ptpt52@gmail.com>
+Source: natflow-20260113.tar.gz
+License: GPL-2.0
+Type: ipkg
+Description: natflow boot init script
+@@
+
+Package: natflow-auth
+Submenu: Fast Forward Stacks
+Version: 20260113
+Depends: +libc +kmod-natflow +ipset +lua-ipops
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: opt
+Category: X
+Repository: base
+Title: natflow auth init script
+Maintainer: Chen Minqiang <ptpt52@gmail.com>
+Source: natflow-20260113.tar.gz
+License: GPL-2.0
+Type: ipkg
+Description: natflow auth init script
+@@
+
+Package: natflow-hostacl
+Submenu: Fast Forward Stacks
+Version: 20260113
+Depends: +libc +natflow-auth +urllogger
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: opt
+Category: X
+Repository: base
+Title: natflow hostacl init script
+Maintainer: Chen Minqiang <ptpt52@gmail.com>
+Source: natflow-20260113.tar.gz
+License: GPL-2.0
+Type: ipkg
+Description: natflow hostacl init script
+@@
+
+
+Source-Makefile: feeds/x/net/mwan3plus/Makefile
+
+Package: mwan3plus
+Submenu: Routing and Redirection
+Version: 3.0.2-r3
+Depends: +libc +ip +ipset +iptables +iptables-mod-conntrack-extra +iptables-mod-ipopt +jshn
+Conflicts: 
+Menu-Depends: 
+Provides: mwan3
+Section: net
+Category: Network
+Repository: base
+Title: Multiwan hotplug script with connection tracking support
+Maintainer: Minqiang Chen <ptpt52@gmail.com>
+Source: 
+License: GPL-2.0
+Type: ipkg
+Description: Hotplug script which makes configuration of multiple WAN interfaces simple
+and manageable. With loadbalancing/failover support for up to 250 wan
+interfaces, connection tracking and an easy to manage traffic ruleset.
+@@
+
+
+Source-Makefile: feeds/x/oldpackages/libs/ucl/Makefile
+Build-Types: host
+
+Package: libucl
+Version: 1.03-r2
+Depends: +libc 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: libs
+Category: Libraries
+Repository: base
+Title: Portable lossless data compression library
+Maintainer: 
+Source: ucl-1.03.tar.gz
+URL: http://www.oberhumer.com/opensource/ucl/
+Type: ipkg
+Description: UCL is a portable lossless data compression library written in ANSI C. UCL
+implements a number of compression algorithms that achieve an excellent
+compression ratio while allowing *very* fast decompression. Decompression
+requires no additional memory.
+@@
+
+
+Source-Makefile: feeds/x/oldpackages/utils/upx/Makefile
+Build-Types: host
+
+Package: upx
+Version: 4.2.4-r1
+Depends: +libc +libstdcpp +zlib
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: Utilities
+Repository: base
+Title: The Ultimate Packer for eXecutables
+Maintainer: Xingwang Liao <kuoruan@gmail.com>
+Source: upx-4.2.4-src.tar.xz
+License: GPL-2.0-only
+LicenseFiles: COPYING LICENSE
+URL: https://upx.github.io/
+Type: ipkg
+Description: UPX is a free, portable, extendable, high-performance executable packer for
+several different executable formats. It achieves an excellent compression ratio
+and offers very fast decompression. Your executables suffer no memory overhead
+or other drawbacks for most of the formats supported, because of in-place
+decompression.
+@@
+
+
+Source-Makefile: feeds/x/p910nd-helper/Makefile
+
+Package: p910nd-helper
+Submenu: Printer
+Version: 0.0.1-r1
+Depends: +libc 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: opt
+Category: X
+Repository: base
+Title: p910nd printer firmware and helper
+Maintainer: Chen Minqiang <ptpt52@gmail.com>
+Source: p910nd-helper-0.0.1.tar.zst
+License: GPL-2.0
+Type: ipkg
+Description: p910nd printer firmware and helper
+@@
+
+
+Source-Makefile: feeds/x/qmi-wwan-q/Makefile
+
+Package: kmod-qmi-wwan-q
+Version: <LINUX_VERSION>.20230915-r
+Depends: +kmod-usb-net-qmi-wwan
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: kernel
+Category: X
+Title: QMI WWAN QMAP driver
+Maintainer: Chen Minqiang <ptpt52@gmail.com>
+Source: 
+License: GPL-2.0-only
+Type: ipkg
+Description:   QMI WWAN QMAP driver for Qualcomm MSM based 3G and LTE modems.
+@@
+
+
+Source-Makefile: feeds/x/quectel-qconnect-manager/Makefile
+
+Package: quectel-cm
+Version: 20230915-r1
+Depends: +libc +kmod-qmi-wwan-q
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: opt
+Category: X
+Repository: base
+Title: Quectel Qconnect Manager
+Maintainer: Chen Minqiang <ptpt52@gmail.com>
+Source: quectel-qconnect-manager-20230915.tar.zst
+License: GPL-2.0
+Type: ipkg
+Description: Quectel Qconnect Manager
+@@
+
+
+Source-Makefile: feeds/x/rproxy/Makefile
+
+Package: kmod-rproxy
+Submenu: Mentohust
+Version: <LINUX_VERSION>.20240411-r
+Depends: +kmod-ipt-conntrack
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: kernel
+Category: X
+Title: rproxy kernel driver
+Maintainer: Chen Minqiang <ptpt52@gmail.com>
+Source: rproxy-20240411.tar.gz
+License: GPL-2.0
+Type: ipkg
+Description:   a kmod to replace user-agent for HTTP flow
+@@
+
+
+Source-Makefile: feeds/x/rtw8852cu/Makefile
+
+Package: kmod-rtw8852cu
+Version: <LINUX_VERSION>.20231106-r
+Depends: +kmod-cfg80211 +kmod-usb-core +@DRIVER_11AX_SUPPORT
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: kernel
+Category: X
+Title: Driver for Realtek 8852 CU devices
+Maintainer: Chen Minqiang <ptpt52@gmail.com>
+Source: rtw8852cu-20231106.tar.gz
+License: GPL-2.0-only
+Type: ipkg
+Description: Driver for Realtek 8852 CU devices
+@@
+
+
+Source-Makefile: feeds/x/sendip/Makefile
+
+Package: sendip
+Version: 2.5-r1
+Depends: +libc 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: opt
+Category: X
+Repository: base
+Title: SendIP
+Maintainer: Chen Minqiang <ptpt52@gmail.com>
+Source: sendip-2.5-r1-20220426.tar.gz
+License: GPL-2.0
+LicenseFiles: COPYING
+URL: https://www-x.antd.nist.gov/ipv6/sendip.html
+Type: ipkg
+Description: 	SendIP is a tool which allows creating (and, of course, sending) arbitrary IP (v4 and v6) packets.
+@@
+
+
+Source-Makefile: feeds/x/shell-functions/Makefile
+
+Package: shell-functions
+Submenu: Libs
+Version: 0.0.1-r1
+Depends: +libc +busybox
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: opt
+Category: X
+Repository: base
+Title: shell functions lib
+Maintainer: Chen Minqiang <ptpt52@gmail.com>
+Source: shell-functions-0.0.1.tar.zst
+License: GPL-2.0
+Type: ipkg
+Description: shell functions lib
+@@
+
+
+Source-Makefile: feeds/x/telnetd-test/Makefile
+
+Package: telnetd-test
+Version: 0.0.1-r1
+Depends: +libc +busybox +@BUSYBOX_CUSTOM +@BUSYBOX_CONFIG_TELNETD +@BUSYBOX_CONFIG_FEATURE_TELNETD_STANDALONE
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: opt
+Category: X
+Repository: base
+Title: telnetd-test for factory test only
+Maintainer: Chen Minqiang <ptpt52@gmail.com>
+Source: telnetd-test-0.0.1.tar.zst
+License: GPL-2.0
+Type: ipkg
+Description: telnetd-test for factory test only
+@@
+
+
+Source-Makefile: feeds/x/urllogger/Makefile
+
+Package: urllogger
+Version: 0.0.1-r1
+Depends: +libc +kmod-natflow
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: opt
+Category: X
+Repository: base
+Title: urllogger
+Maintainer: Chen Minqiang <ptpt52@gmail.com>
+Source: urllogger-0.0.1.tar.zst
+License: GPL-2.0
+Type: ipkg
+Description: urllogger
+@@
+
+
+Source-Makefile: feeds/x/utils/memtester/Makefile
+
+Package: memtester
+Version: 4.1.3-r1
+Depends: +libc 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: Utilities
+Repository: base
+Title: Userspace utility for testing the memory subsystem for faults
+Maintainer: 
+Source: memtester-4.1.3.tar.gz
+URL: http://pyropus.ca/software/memtester/
+Type: ipkg
+Description:  A userspace utility for testing the memory subsystem for faults.
+@@
+
+
+Source-Makefile: feeds/x/vhusbd-online/Makefile
+
+Package: vhusbd-online
+Version: 1.0.0-r1
+Depends: +libc 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: Applications
+Category: X
+Repository: base
+Title: VirtualHere online version
+Maintainer: Chen Minqiang <ptpt52@gmail.com>
+Source: 
+License: GPL-2.0
+Type: ipkg
+Description:   VirtualHere allows USB devices to be used remotely over a network just as if they were locally connected.
+@@
+
+
+Source-Makefile: feeds/x/xinfc/Makefile
+
+Package: xinfc
+Submenu: NFC tools
+Version: 20240616
+Depends: +libc +libstdcpp
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: opt
+Category: X
+Repository: base
+Title: xinfc
+Maintainer: Chen Minqiang <ptpt52@gmail.com>
+Source: xinfc-20240616.tar.gz
+License: GPL-2.0
+Type: ipkg
+Description:  Tools for interfacing with the NFC chip on Xiaomi routers
+@@
+
+

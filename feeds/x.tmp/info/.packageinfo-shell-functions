@@ -1,0 +1,21 @@
+Source-Makefile: feeds/x/shell-functions/Makefile
+
+Package: shell-functions
+Submenu: Libs
+Version: 0.0.1-r1
+Depends: +libc +busybox
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: opt
+Category: X
+Repository: base
+Title: shell functions lib
+Maintainer: Chen Minqiang <ptpt52@gmail.com>
+Source: shell-functions-0.0.1.tar.zst
+License: GPL-2.0
+Type: ipkg
+Description: shell functions lib
+@@
+
+

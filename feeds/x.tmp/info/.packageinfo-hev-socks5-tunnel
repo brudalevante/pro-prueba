@@ -1,0 +1,22 @@
+Source-Makefile: feeds/x/hev-socks5-tunnel/Makefile
+
+Package: hev-socks5-tunnel
+Version: 2.5.3-r1
+Depends: +libc 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: opt
+Category: X
+Repository: base
+Title: A tunnel over Socks5 proxy (tun2socks) for Unix.
+Maintainer: Chen Minqiang <ptpt52@x-wrt.com>
+Source: hev-socks5-tunnel-2.5.3.tar.gz
+License: GPL-3.0
+LicenseFiles: LICENSE
+URL: https://github.com/heiher/hev-socks5-tunnel
+Type: ipkg
+Description: A tunnel over Socks5 proxy (tun2socks) for Unix.
+@@
+
+

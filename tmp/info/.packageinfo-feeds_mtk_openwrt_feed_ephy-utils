@@ -1,0 +1,20 @@
+Source-Makefile: package/feeds/mtk_openwrt_feed/ephy-utils/Makefile
+
+Package: ephy-utils
+Submenu: Misc
+Version: 1-r0-be14b610
+Depends: +libc +mii_mgr +switch
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: MTK Properties
+Category: MTK Properties
+Repository: mtk_openwrt_feed
+Title: Ethernet Phy Utilities
+Maintainer: 
+Source: 
+Type: ipkg
+Description:   MediaTek Rebb ethernet phy utilities
+@@
+
+

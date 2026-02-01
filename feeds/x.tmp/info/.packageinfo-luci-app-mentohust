@@ -1,0 +1,22 @@
+Source-Makefile: feeds/x/luci-app-mentohust/Makefile
+
+Package: luci-app-mentohust
+Submenu: Mentohust
+Version: 4.0.0-r1
+Depends: +libc +mentohust +luci-compat +luci-lib-ipkg
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: opt
+Category: X
+Repository: base
+Title: LuCI Support for mentohust
+Maintainer: Chen Minqiang <ptpt52@gmail.com>
+Source: 
+License: GPLv3
+LicenseFiles: LICENSE
+Type: ipkg
+Description: 	LuCI Support for mentohust.
+@@
+
+

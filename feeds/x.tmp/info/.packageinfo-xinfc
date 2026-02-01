@@ -1,0 +1,21 @@
+Source-Makefile: feeds/x/xinfc/Makefile
+
+Package: xinfc
+Submenu: NFC tools
+Version: 20240616
+Depends: +libc +libstdcpp
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: opt
+Category: X
+Repository: base
+Title: xinfc
+Maintainer: Chen Minqiang <ptpt52@gmail.com>
+Source: xinfc-20240616.tar.gz
+License: GPL-2.0
+Type: ipkg
+Description:  Tools for interfacing with the NFC chip on Xiaomi routers
+@@
+
+

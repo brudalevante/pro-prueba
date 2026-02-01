@@ -1,0 +1,19 @@
+Source-Makefile: package/feeds/mtk_openwrt_feed/mt798x-2p5g-phy-firmware-internal/Makefile
+
+Package: mt798x-2p5g-phy-firmware-internal
+Version: 1-r1
+Depends: +libc 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: firmware
+Category: Firmware
+Repository: mtk_openwrt_feed
+Title: MT798x 2.5Gphy firmware's internal version
+Maintainer: 
+Source: 
+Type: ipkg
+Description:   MT798x 2.5Gphy firmware's internal version
+@@
+
+

@@ -1,0 +1,40 @@
+Source-Makefile: feeds/x/base-config-setting/Makefile
+
+Package: base-config-setting
+Submenu: Base config setting for this board
+Version: 1.0.0-r1
+Depends: +libc +busybox +base-files +jsonfilter
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: Applications
+Category: X
+Title: base-config-setting
+Maintainer: Chen Minqiang <ptpt52@gmail.com>
+Source: 
+License: GPL-2.0
+Type: ipkg
+Description:   Base config setting for this board
+@@
+Config:
+  source "feeds/x/base-config-setting/Config.in"
+@@
+
+Package: base-config-setting-ext4fs
+Submenu: Base config setting for this board
+Version: 1.0.0-r1
+Depends: +libc +base-config-setting +busybox +@BUSYBOX_CUSTOM +@BUSYBOX_CONFIG_STAT +kmod-fs-ext4 +tune2fs +ethtool +blockd +blkid +fdisk +gdisk +partx-utils +e2fsprogs
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: Applications
+Category: X
+Title: base-config-setting ext4fs set
+Maintainer: Chen Minqiang <ptpt52@gmail.com>
+Source: 
+License: GPL-2.0
+Type: ipkg
+Description: base-config-setting ext4fs set
+@@
+
+

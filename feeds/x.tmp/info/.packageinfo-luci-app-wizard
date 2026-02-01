@@ -1,0 +1,22 @@
+Source-Makefile: feeds/x/luci-app-wizard/Makefile
+
+Package: luci-app-wizard
+Submenu: Configuration Wizard Support
+Version: 1.0.1-r1
+Depends: +libc +luci-base +rpcd-mod-iwinfo
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: opt
+Category: X
+Repository: base
+Title: LuCI Support for wizard
+Maintainer: Chen Minqiang <ptpt52@gmail.com>
+Source: 
+License: GPLv3
+LicenseFiles: LICENSE
+Type: ipkg
+Description: 	LuCI Support for wizard.
+@@
+
+

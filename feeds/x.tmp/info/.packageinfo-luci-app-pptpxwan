@@ -1,0 +1,22 @@
+Source-Makefile: feeds/x/luci-app-pptpxwan/Makefile
+
+Package: luci-app-pptpxwan
+Submenu: PPTP XWAN Support
+Version: 1.0.1-r1
+Depends: +libc +lua-ipops
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: opt
+Category: X
+Repository: base
+Title: LuCI Support for pptpxwan
+Maintainer: Chen Minqiang <ptpt52@gmail.com>
+Source: 
+License: GPLv3
+LicenseFiles: LICENSE
+Type: ipkg
+Description: 	LuCI Support for pptpxwan.
+@@
+
+

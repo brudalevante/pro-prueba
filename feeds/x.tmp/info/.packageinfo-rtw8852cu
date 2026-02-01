@@ -1,0 +1,19 @@
+Source-Makefile: feeds/x/rtw8852cu/Makefile
+
+Package: kmod-rtw8852cu
+Version: <LINUX_VERSION>.20231106-r
+Depends: +kmod-cfg80211 +kmod-usb-core +@DRIVER_11AX_SUPPORT
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: kernel
+Category: X
+Title: Driver for Realtek 8852 CU devices
+Maintainer: Chen Minqiang <ptpt52@gmail.com>
+Source: rtw8852cu-20231106.tar.gz
+License: GPL-2.0-only
+Type: ipkg
+Description: Driver for Realtek 8852 CU devices
+@@
+
+

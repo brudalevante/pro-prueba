@@ -1,0 +1,22 @@
+Source-Makefile: feeds/x/luci-app-natflow-users/Makefile
+
+Package: luci-app-natflow-users
+Submenu: Natflow users module support
+Version: 1.0.1-r1
+Depends: +libc +natflow-auth +luci-compat
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: opt
+Category: X
+Repository: base
+Title: LuCI Support for natflow users
+Maintainer: Chen Minqiang <ptpt52@gmail.com>
+Source: 
+License: GPLv3
+LicenseFiles: LICENSE
+Type: ipkg
+Description: 	LuCI Support for natflow users.
+@@
+
+

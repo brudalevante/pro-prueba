@@ -1,0 +1,22 @@
+Source-Makefile: feeds/x/mentohust/Makefile
+Build-Depends: gettext-full/host
+
+Package: mentohust
+Submenu: Mentohust
+Version: 4.0.0
+Depends: +libc +libpcap
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: opt
+Category: X
+Repository: base
+Title: Mentohust v4 support
+Maintainer: Chen Minqiang <ptpt52@gmail.com>
+Source: mentohust-4.0.0-2f9ef2d6df5d95c0faa2e542f1cb77114824e697.tar.xz
+License: GPL-2.0
+Type: ipkg
+Description:  Mentohust v4 support
+@@
+
+

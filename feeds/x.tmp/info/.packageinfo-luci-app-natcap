@@ -1,0 +1,22 @@
+Source-Makefile: feeds/x/luci-app-natcap/Makefile
+
+Package: luci-app-natcap
+Submenu: Natcap Support
+Version: 5.0.1-r1
+Depends: +libc +natcapd +lua-cjson +luci-compat
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: opt
+Category: X
+Repository: base
+Title: LuCI Support for natcap
+Maintainer: Chen Minqiang <ptpt52@gmail.com>
+Source: 
+License: GPLv3
+LicenseFiles: LICENSE
+Type: ipkg
+Description: 	LuCI Support for natcap.
+@@
+
+

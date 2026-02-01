@@ -1,0 +1,93 @@
+Source-Makefile: feeds/x/natcap/Makefile
+
+Package: kmod-natcap
+Submenu: Natcap Support
+Version: <LINUX_VERSION>.20260113-r
+Depends: +kmod-ipt-conntrack +kmod-ipt-nat +kmod-ipt-ipset
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: kernel
+Category: X
+Title: Natcap kernel driver
+Maintainer: Chen Minqiang <ptpt52@gmail.com>
+Source: natcap-20260113.tar.gz
+License: GPL-2.0
+Type: ipkg
+Kernel-Config: CONFIG_NF_CONNTRACK_MARK=y
+Description:   Driver for natcap packet proxy to avoid inspection
+@@
+
+Package: natcapd
+Submenu: Natcap Support
+Version: 20260113
+Depends: +libc +kmod-natcap +libustream-ssl +uclient-fetch +lua-cjson +ipset +dnsmasq-full +@PACKAGE_dnsmasq_full_ipset +busybox +@BUSYBOX_CUSTOM +@BUSYBOX_CONFIG_CKSUM +@BUSYBOX_CONFIG_BASE64 +@BUSYBOX_CONFIG_TIMEOUT +@BUSYBOX_CONFIG_NOHUP +@BUSYBOX_CONFIG_DIFF
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: opt
+Category: X
+Repository: base
+Title: natcapd agent for natcap
+Maintainer: Chen Minqiang <ptpt52@gmail.com>
+Source: natcap-20260113.tar.gz
+License: GPL-2.0
+Type: ipkg
+Description:  Natcapd agent for natcap
+@@
+
+Package: natcapd-client
+Submenu: Natcap Support
+Version: 20260113
+Depends: +libc +libev
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: opt
+Category: X
+Repository: base
+Title: Natcapd_client agent for natcap
+Maintainer: Chen Minqiang <ptpt52@gmail.com>
+Source: natcap-20260113.tar.gz
+License: GPL-2.0
+Type: ipkg
+Description: Natcapd_client agent for natcap
+@@
+
+Package: natcapd-server
+Submenu: Natcap Support
+Version: 20260113
+Depends: +libc +libev
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: opt
+Category: X
+Repository: base
+Title: Natcapd_server agent for natcap
+Maintainer: Chen Minqiang <ptpt52@gmail.com>
+Source: natcap-20260113.tar.gz
+License: GPL-2.0
+Type: ipkg
+Description: Natcapd_server agent for natcap
+@@
+
+Package: natcapd-peer
+Submenu: Natcap Support
+Version: 20260113
+Depends: +libc +kmod-natcap +lua-cjson +ipset +busybox +@BUSYBOX_CUSTOM +@BUSYBOX_CONFIG_TIMEOUT
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: opt
+Category: X
+Repository: base
+Title: natcapd peer for natcap
+Maintainer: Chen Minqiang <ptpt52@gmail.com>
+Source: natcap-20260113.tar.gz
+License: GPL-2.0
+Type: ipkg
+Description: natcapd peer for natcap
+@@
+
+

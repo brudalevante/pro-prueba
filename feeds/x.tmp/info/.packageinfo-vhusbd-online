@@ -1,0 +1,20 @@
+Source-Makefile: feeds/x/vhusbd-online/Makefile
+
+Package: vhusbd-online
+Version: 1.0.0-r1
+Depends: +libc 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: Applications
+Category: X
+Repository: base
+Title: VirtualHere online version
+Maintainer: Chen Minqiang <ptpt52@gmail.com>
+Source: 
+License: GPL-2.0
+Type: ipkg
+Description:   VirtualHere allows USB devices to be used remotely over a network just as if they were locally connected.
+@@
+
+

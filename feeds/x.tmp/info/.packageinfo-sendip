@@ -1,0 +1,22 @@
+Source-Makefile: feeds/x/sendip/Makefile
+
+Package: sendip
+Version: 2.5-r1
+Depends: +libc 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: opt
+Category: X
+Repository: base
+Title: SendIP
+Maintainer: Chen Minqiang <ptpt52@gmail.com>
+Source: sendip-2.5-r1-20220426.tar.gz
+License: GPL-2.0
+LicenseFiles: COPYING
+URL: https://www-x.antd.nist.gov/ipv6/sendip.html
+Type: ipkg
+Description: 	SendIP is a tool which allows creating (and, of course, sending) arbitrary IP (v4 and v6) packets.
+@@
+
+

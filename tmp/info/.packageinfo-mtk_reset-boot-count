@@ -1,0 +1,21 @@
+Source-Makefile: package/mtk/reset-boot-count/Makefile
+
+Package: kmod-reset-boot-count
+Submenu: Other modules
+Version: <LINUX_VERSION>-r1
+Depends: 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: kernel
+Category: Kernel modules
+Title: Reset dual-boot boot counter for MediaTek platform
+Maintainer: 
+Source: 
+License: BSD-3-Clause
+Type: ipkg
+Description:   This is used to reset dual-boot boot retry counter to indicate that the
+  system has booted up successfully
+@@
+
+

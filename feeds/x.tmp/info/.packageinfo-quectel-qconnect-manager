@@ -1,0 +1,20 @@
+Source-Makefile: feeds/x/quectel-qconnect-manager/Makefile
+
+Package: quectel-cm
+Version: 20230915-r1
+Depends: +libc +kmod-qmi-wwan-q
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: opt
+Category: X
+Repository: base
+Title: Quectel Qconnect Manager
+Maintainer: Chen Minqiang <ptpt52@gmail.com>
+Source: quectel-qconnect-manager-20230915.tar.zst
+License: GPL-2.0
+Type: ipkg
+Description: Quectel Qconnect Manager
+@@
+
+

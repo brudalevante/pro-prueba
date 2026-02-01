@@ -1,0 +1,19 @@
+Source-Makefile: feeds/x/qmi-wwan-q/Makefile
+
+Package: kmod-qmi-wwan-q
+Version: <LINUX_VERSION>.20230915-r
+Depends: +kmod-usb-net-qmi-wwan
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: kernel
+Category: X
+Title: QMI WWAN QMAP driver
+Maintainer: Chen Minqiang <ptpt52@gmail.com>
+Source: 
+License: GPL-2.0-only
+Type: ipkg
+Description:   QMI WWAN QMAP driver for Qualcomm MSM based 3G and LTE modems.
+@@
+
+

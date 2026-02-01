@@ -1,0 +1,22 @@
+Source-Makefile: feeds/x/luci-app-simplenetwork/Makefile
+
+Package: luci-app-simplenetwork
+Submenu: Configuration SimpleNetwork Support
+Version: 1.0.1-r1
+Depends: +libc 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: opt
+Category: X
+Repository: base
+Title: LuCI Support for simplenetwork
+Maintainer: Chen Minqiang <ptpt52@gmail.com>
+Source: 
+License: GPLv3
+LicenseFiles: LICENSE
+Type: ipkg
+Description: 	LuCI Support for simplenetwork.
+@@
+
+
