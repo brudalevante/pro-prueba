@@ -22,8 +22,8 @@ platform_change_openwrt_config() {
 }
 
 filogic_change_kernel_config() {
-	kernel_config_enable CONFIG_EXTRA_FIRMWARE "\"airoha/EthMD32.dm.bin airoha/EthMD32.DSP.bin"\"
-	kernel_config_enable CONFIG_EXTRA_FIRMWARE_DIR "\"../../linux-firmware-20241110/"\"
+	kernel_config_enable CONFIG_EXTRA_FIRMWARE "\"airoha/EthMD32.dm.bin airoha/EthMD32.DSP.bin\""
+	kernel_config_enable CONFIG_EXTRA_FIRMWARE_DIR "\"../../linux-firmware-20241110/\""
 	kernel_config_enable CONFIG_AIR_EN8811H_PHY
 	kernel_config_enable CONFIG_AIR_EN8811H_PHY_DEBUGFS
 	kernel_config_enable CONFIG_MT753X_GSW
@@ -49,7 +49,12 @@ copy_optee_files() {
 }
 
 airoha_firmware_install() {
-	exec_log "make -C \"${openwrt_root}\" V=${verbose} -j\$((\$(nproc) + 1)) package/firmware/linux-firmware/{clean,prepare}"
+    exec_log "Creating Airoha firmware directory and installing firmware blobs"
+    mkdir -p "${openwrt_root}/build_dir/target-aarch64_cortex-a53_musl/linux-mediatek_filogic/linux-6.6.93/drivers/base/firmware_loader/builtin/airoha"
+    
+    cp "${openwrt_root}/feeds/mtk_openwrt_feed/21.02/files/target/linux/mediatek/files-5.4/drivers/base/firmware_loader/builtin/airoha/"* \
+       "${openwrt_root}/build_dir/target-aarch64_cortex-a53_musl/linux-mediatek_filogic/linux-6.6.93/drivers/base/firmware_loader/builtin/airoha/"
+    exec_log "Airoha firmware blobs and Makefile copied successfully"
 }
 
 remove_crypto_package () {
