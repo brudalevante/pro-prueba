@@ -52,9 +52,23 @@ airoha_firmware_install() {
     exec_log "Creating Airoha firmware directory and installing firmware blobs"
     mkdir -p "${openwrt_root}/build_dir/target-aarch64_cortex-a53_musl/linux-mediatek_filogic/linux-6.6.93/drivers/base/firmware_loader/builtin/airoha"
     
+    # Copia todos los blobs, ensambladores y objetos necesarios
     cp "${openwrt_root}/feeds/mtk_openwrt_feed/21.02/files/target/linux/mediatek/files-5.4/drivers/base/firmware_loader/builtin/airoha/"* \
        "${openwrt_root}/build_dir/target-aarch64_cortex-a53_musl/linux-mediatek_filogic/linux-6.6.93/drivers/base/firmware_loader/builtin/airoha/"
-    exec_log "Airoha firmware blobs and Makefile copied successfully"
+    
+    # Procesar los objetos y ensambladores (EthMD32.dm.bin.gen.o y EthMD32.DSP.bin.gen.o)
+    exec_log "Processing EthMD32.dm.bin.gen.o and EthMD32.DSP.bin.gen.o"
+    savedcmd_drivers/base/firmware_loader/builtin/airoha/EthMD32.dm.bin.gen.o := aarch64-openwrt-linux-musl-gcc -Wp,-MMD,drivers/base/firmware_loader/builtin/airoha/.EthMD32.dm.bin.gen.o.d -nostdinc -I./arch/arm64/include -I./arch/arm64/include/generated  -I./include -I./arch/arm64/include/uapi -I./arch/arm64/include/generated/uapi -I./include/uapi -I./include/generated/uapi -include ./include/linux/compiler-version.h -include ./include/linux/kconfig.h -D__KERNEL__ -mlittle-endian -DKASAN_SHADOW_SCALE_SHIFT= -fmacro-prefix-map=./= -Werror -D__ASSEMBLY__ -fno-PIE -mabi=lp64 -fno-asynchronous-unwind-tables -fno-unwind-tables -DKASAN_SHADOW_SCALE_SHIFT= -g -c -o drivers/base/firmware_loader/builtin/airoha/EthMD32.dm.bin.gen.o drivers/base/firmware_loader/builtin/airoha/EthMD32.dm.bin.gen.S
+
+    source_drivers/base/firmware_loader/builtin/airoha/EthMD32.dm.bin.gen.o := drivers/base/firmware_loader/builtin/airoha/EthMD32.dm.bin.gen.S
+    deps_drivers/base/firmware_loader/builtin/airoha/EthMD32.dm.bin.gen.o := \
+      include/linux/compiler-version.h \
+      $(wildcard include/config/CC_VERSION_TEXT) \
+      include/linux/kconfig.h \
+      $(wildcard include/config/CPU_BIG_ENDIAN) \
+      $(wildcard include/config/BOOGER) \
+      $(wildcard include/config/FOO)
+    exec_log "Airoha firmware and command files processed successfully"
 }
 
 remove_crypto_package () {
