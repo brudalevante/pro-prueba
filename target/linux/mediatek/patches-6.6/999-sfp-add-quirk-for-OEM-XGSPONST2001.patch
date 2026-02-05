@@ -1,0 +1,36 @@
+Subject: [PATCH] net: phy: sfp: add quirk for OEM XGSPONST2000 XGS-PON module
+
+Add quirk for the OEM XGSPONST2000 XGS-PON module to use sfp_fixup_halny_gsfp.
+This module requires the fixup for correct operation.
+
+The module identifiers are based on working EEPROM and ethtool output.
+
+Signed-off-by: OpenWrt <openwrt@openwrt.org>
+---
+drivers/net/phy/sfp.c | 4 ++++
+1 file changed, 4 insertions(+)
+
+diff --git a/drivers/net/phy/sfp.c b/drivers/net/phy/sfp.c
+index 14f14bc..7b2a6a1 100644
+--- a/drivers/net/phy/sfp.c
++++ b/drivers/net/phy/sfp.c
+@@ -497,10 +497,15 @@
+ 	SFP_QUIRK("FS", "GPON-ONU-34-20BI", sfp_quirk_2500basex,
+ 		  sfp_fixup_ignore_tx_fault),
+ 
+-	SFP_QUIRK_F("HALNy", "HL-GSFP", sfp_fixup_halny_gsfp),
+-
+-	// HG MXPD-483II-F 2.5G supports 2500Base-X, but incorrectly reports
+-	// 2600MBd in their EERPOM
++	// OEM XGSPONST2000 XGS-PON module (SFP+)
++ 	SFP_QUIRK_F("OEM", "XGSPONST2000", sfp_fixup_halny_gsfp),
++	
++	
++	// OEM XGSPONST2001 XGS-PON module (SFP+)
++	SFP_QUIRK_F("OEM", "XGSPONST2001", sfp_fixup_halny_gsfp),	
++ 
++ 	// HG MXPD-483II-F 2.5G supports 2500Base-X, but incorrectly reports
++ 	// 2600MBd in their EERPOM
+ 	SFP_QUIRK_M("HG GENUINE", "MXPD-483II", sfp_quirk_2500basex),
+ 
+ 	// Huawei MA5671A can operate at 2500base-X, but report 1.2GBd NRZ in
